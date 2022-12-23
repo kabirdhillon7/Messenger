@@ -34,8 +34,8 @@ class LoginViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let size = view.frame.size.width / 3
-        imageView.frame = CGRect(x: (view.frame.size.width - size)/2,
+        let size = view.width / 3
+        imageView.frame = CGRect(x: (view.width - size) / 2,
                                  y: 20,
                                  width: size,
                                  height: size)

@@ -19,6 +19,7 @@
 		48DB04DE2955588700DEA352 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB04DD2955588700DEA352 /* VideoPlayerViewController.swift */; };
 		48DB04E0295558A900DEA352 /* NewConverstionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB04DF295558A900DEA352 /* NewConverstionViewController.swift */; };
 		48DB04E2295558B400DEA352 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB04E1295558B400DEA352 /* ProfileViewController.swift */; };
+		48DB04E52955638400DEA352 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB04E42955638400DEA352 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		48DB04DD2955588700DEA352 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		48DB04DF295558A900DEA352 /* NewConverstionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConverstionViewController.swift; sourceTree = "<group>"; };
 		48DB04E1295558B400DEA352 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		48DB04E42955638400DEA352 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				48DB04BD295554A500DEA352 /* AppDelegate.swift */,
 				48DB04BF295554A500DEA352 /* SceneDelegate.swift */,
+				48DB04E42955638400DEA352 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				48DB04DA2955585D00DEA352 /* RegisterViewController.swift in Sources */,
 				48DB04C2295554A500DEA352 /* ConversationsViewController.swift in Sources */,
 				48DB04DE2955588700DEA352 /* VideoPlayerViewController.swift in Sources */,
+				48DB04E52955638400DEA352 /* Extensions.swift in Sources */,
 				48DB04BE295554A500DEA352 /* AppDelegate.swift in Sources */,
 				48DB04E2295558B400DEA352 /* ProfileViewController.swift in Sources */,
 				48DB04C0295554A500DEA352 /* SceneDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate, UITextFieldDelegate, UITextFieldDelegate {
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -79,8 +79,11 @@ class LoginViewController: UIViewController {
                                                             target: self,
                                                             action: #selector(didTapRegister))
         loginButton.addTarget(self,
-                              action: #selector(loginButtonTapped()),
+                              action: #selector(loginButtonTapped),
                               for: .touchUpInside)
+        
+        emailField.delegate = self
+        passwordField.delegate = self
         
         // Add subviews
         view.addSubview(scrollView)
@@ -142,4 +145,18 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailField {
+            passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            loginButtonTapped()
+        }
+        
+        return true
+    }
 }

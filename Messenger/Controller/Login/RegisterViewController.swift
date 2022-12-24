@@ -140,8 +140,18 @@ class RegisterViewController: UIViewController {
                                  width: size,
                                  height: size)
         
-        emailField.frame = CGRect(x: 30,
+        firstNameField.frame = CGRect(x: 30,
                                   y: imageView.bottom + 10,
+                                  width: scrollView.width - 60,
+                                  height: 52)
+        
+        lastNameField.frame = CGRect(x: 30,
+                                  y: firstNameField.bottom + 10,
+                                  width: scrollView.width - 60,
+                                  height: 52)
+        
+        emailField.frame = CGRect(x: 30,
+                                  y: lastNameField.bottom + 10,
                                   width: scrollView.width - 60,
                                   height: 52)
         

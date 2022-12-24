@@ -167,12 +167,22 @@ class RegisterViewController: UIViewController {
     
     @objc private func registerButtonTapped() {
         
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
-        guard let firstName = firstNameField.text, let lastName = firstNameField.text, let email = emailField.text, let password = passwordField.text, !firstName.isEmpty, !lastName.isEmpty, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
-            alertUserLoginError()
-            return
+        guard let firstName = firstNameField.text,
+              let lastName = firstNameField.text,
+              let email = emailField.text,
+              let password = passwordField.text,
+              !firstName.isEmpty,
+              !lastName.isEmpty,
+              !email.isEmpty,
+              !password.isEmpty,
+              password.count >= 6 else {
+                alertUserLoginError()
+                return
         }
         
         // Implement Firebase Login

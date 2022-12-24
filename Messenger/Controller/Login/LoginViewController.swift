@@ -130,7 +130,7 @@ class LoginViewController: UIViewController {
     }
     
     func alertUserLoginError() {
-        let alert = UIAlertController(title: "Whopps",
+        let alert = UIAlertController(title: "Whoops",
                                       message: "Please enter all information to log in.",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss",

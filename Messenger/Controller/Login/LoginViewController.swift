@@ -57,6 +57,17 @@ class LoginViewController: UIViewController {
         
         return field
     }()
+    
+    private let loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Log In", for: .normal)
+        button.backgroundColor = .link
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 12
+        button.layer.masksToBounds = true
+        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +85,7 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(imageView)
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
+        scrollView.addSubview(loginButton)
     }
     
     override func viewDidLayoutSubviews() {
@@ -96,6 +108,10 @@ class LoginViewController: UIViewController {
                                   y: emailField.bottom + 10,
                                   width: scrollView.width - 60,
                                   height: 52)
+        loginButton.frame = CGRect(x: 30,
+                                   y: passwordField.bottom + 10,
+                                   width: scrollView.width - 60,
+                                   height: 52)
     }
     
 

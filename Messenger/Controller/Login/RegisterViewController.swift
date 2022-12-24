@@ -92,7 +92,7 @@ class RegisterViewController: UIViewController {
         return field
     }()
     
-    private let loginButton: UIButton = {
+    private let registerButton: UIButton = {
         let button = UIButton()
         button.setTitle("Register", for: .normal)
         button.backgroundColor = .systemGreen
@@ -112,8 +112,8 @@ class RegisterViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(didTapRegister))
-        loginButton.addTarget(self,
-                              action: #selector(loginButtonTapped),
+        registerButton.addTarget(self,
+                              action: #selector(registerButtonTapped),
                               for: .touchUpInside)
         
         emailField.delegate = self
@@ -126,7 +126,7 @@ class RegisterViewController: UIViewController {
         scrollView.addSubview(lastNameField)
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
-        scrollView.addSubview(loginButton)
+        scrollView.addSubview(registerButton)
     }
     
     override func viewDidLayoutSubviews() {
@@ -159,13 +159,13 @@ class RegisterViewController: UIViewController {
                                   y: emailField.bottom + 10,
                                   width: scrollView.width - 60,
                                   height: 52)
-        loginButton.frame = CGRect(x: 30,
+        registerButton.frame = CGRect(x: 30,
                                    y: passwordField.bottom + 10,
                                    width: scrollView.width - 60,
                                    height: 52)
     }
     
-    @objc private func loginButtonTapped() {
+    @objc private func registerButtonTapped() {
         
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
@@ -204,7 +204,7 @@ extension RegisterViewController: UITextFieldDelegate {
         if textField == emailField {
             passwordField.becomeFirstResponder()
         } else if textField == passwordField {
-            loginButtonTapped()
+            registerButtonTapped()
         }
         
         return true

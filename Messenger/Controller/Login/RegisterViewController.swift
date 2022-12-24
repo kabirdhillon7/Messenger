@@ -235,3 +235,7 @@ extension RegisterViewController: UITextFieldDelegate {
         return true
     }
 }
+
+extension RegisterViewController: UIImagePickerControllerDelegate {
+    
+}

@@ -151,14 +151,14 @@ class RegisterViewController: UIViewController {
                                  height: size)
         
         firstNameField.frame = CGRect(x: 30,
-                                  y: imageView.bottom + 10,
-                                  width: scrollView.width - 60,
-                                  height: 52)
+                                      y: imageView.bottom + 10,
+                                      width: scrollView.width - 60,
+                                      height: 52)
         
         lastNameField.frame = CGRect(x: 30,
-                                  y: firstNameField.bottom + 10,
-                                  width: scrollView.width - 60,
-                                  height: 52)
+                                     y: firstNameField.bottom + 10,
+                                     width: scrollView.width - 60,
+                                     height: 52)
         
         emailField.frame = CGRect(x: 30,
                                   y: lastNameField.bottom + 10,
@@ -166,13 +166,14 @@ class RegisterViewController: UIViewController {
                                   height: 52)
         
         passwordField.frame = CGRect(x: 30,
-                                  y: emailField.bottom + 10,
-                                  width: scrollView.width - 60,
-                                  height: 52)
+                                     y: emailField.bottom + 10,
+                                     width: scrollView.width - 60,
+                                     height: 52)
+        
         registerButton.frame = CGRect(x: 30,
-                                   y: passwordField.bottom + 10,
-                                   width: scrollView.width - 60,
-                                   height: 52)
+                                      y: passwordField.bottom + 10,
+                                      width: scrollView.width - 60,
+                                      height: 52)
     }
     
     @objc private func registerButtonTapped() {

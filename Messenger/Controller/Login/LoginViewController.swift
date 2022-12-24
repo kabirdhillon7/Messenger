@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Log In"
@@ -110,9 +110,9 @@ class LoginViewController: UIViewController {
                                   height: 52)
         
         passwordField.frame = CGRect(x: 30,
-                                  y: emailField.bottom + 10,
-                                  width: scrollView.width - 60,
-                                  height: 52)
+                                     y: emailField.bottom + 10,
+                                     width: scrollView.width - 60,
+                                     height: 52)
         loginButton.frame = CGRect(x: 30,
                                    y: passwordField.bottom + 10,
                                    width: scrollView.width - 60,
@@ -124,9 +124,13 @@ class LoginViewController: UIViewController {
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
-        guard let email = emailField.text, let password = passwordField.text, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
-            alertUserLoginError()
-            return
+        guard let email = emailField.text,
+              let password = passwordField.text,
+              !email.isEmpty,
+              !password.isEmpty,
+              password.count >= 6 else {
+                alertUserLoginError()
+                return
         }
         
         // Implement Firebase Login
@@ -142,13 +146,13 @@ class LoginViewController: UIViewController {
                                       handler: nil))
         present(alert, animated: true)
     }
-
+    
     @objc private func didTapRegister() {
         let vc = RegisterViewController()
         vc.title = "Create Account"
         navigationController?.pushViewController(vc, animated: true)
     }
-
+    
 }
 
 extension LoginViewController: UITextFieldDelegate {

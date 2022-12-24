@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate, UITextFieldDelegate, UITextFieldDelegate {
+class LoginViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()

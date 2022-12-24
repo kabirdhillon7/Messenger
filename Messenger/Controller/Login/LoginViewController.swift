@@ -114,6 +114,25 @@ class LoginViewController: UIViewController {
                                    height: 52)
     }
     
+    @objc private func loginButtonTapped() {
+        guard let email = emailField.text, let password = passwordField.text, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+            alertUserLoginError()
+            return
+        }
+        
+        // Implement Firebase Login
+        
+    }
+    
+    func alertUserLoginError() {
+        let alert = UIAlertController(title: "Whopps",
+                                      message: "Please enter all information to log in.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss",
+                                      style: .cancel,
+                                      handler: nil))
+        present(alert, animated: true)
+    }
 
     @objc private func didTapRegister() {
         let vc = RegisterViewController()

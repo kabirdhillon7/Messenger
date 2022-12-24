@@ -78,8 +78,10 @@ class LoginViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(didTapRegister))
-
-        // Do any additional setup after loading the view.
+        loginButton.addTarget(self,
+                              action: #selector(loginButtonTapped()),
+                              for: .touchUpInside)
+        
         // Add subviews
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)

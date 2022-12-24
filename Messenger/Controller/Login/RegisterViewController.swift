@@ -17,7 +17,8 @@ class RegisterViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "ChatLogo")
+        imageView.image = UIImage(systemName: "person")
+        imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -127,6 +128,12 @@ class RegisterViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(registerButton)
+        
+        let gesture = UITapGestureRecognizer(target: self,
+                                             action: #selector(didTapChangeProfilePic))
+        gesture.numberOfTouchesRequired = 1
+        gesture.numberOfTapsRequired = 1
+        imageView.addGestureRecognizer(gesture)
     }
     
     override func viewDidLayoutSubviews() {
@@ -185,13 +192,13 @@ class RegisterViewController: UIViewController {
                 return
         }
         
-        // Implement Firebase Login
+        // Firebase Login
         
     }
     
     func alertUserLoginError() {
         let alert = UIAlertController(title: "Whopps",
-                                      message: "Please enter all information to register.",
+                                      message: "Please enter all information to create a new account.",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss",
                                       style: .cancel,
@@ -203,6 +210,10 @@ class RegisterViewController: UIViewController {
         let vc = RegisterViewController()
         vc.title = "Create Account"
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func didTapChangeProfilePic() {
+        print("Change pic called")
     }
 
 }

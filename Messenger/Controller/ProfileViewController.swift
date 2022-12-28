@@ -42,14 +42,29 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-            let vc = LoginViewController()
-            let nav = UINavigationController(rootViewController: vc)
-            nav.modalPresentationStyle = .fullScreen
-            present(nav, animated: false)
-        } catch {
-            print("Failed to loggout")
-        }
+        let alertSheet = UIAlertController(title: "",
+                                           message: "",
+                                           preferredStyle: .actionSheet)
+        alertSheet.addAction(UIAlertAction(title: "Log Out",
+                                           style: .destructive,
+                                           handler: { [weak self] _ in
+            guard let strongSelf = self else {
+                return
+            }
+            do {
+                try FirebaseAuth.Auth.auth().signOut()
+                let vc = LoginViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .fullScreen
+                strongSelf.present(nav, animated: true)
+            } catch {
+                print("Failed to loggout")
+            }
+        }))
+        alertSheet.addAction(UIAlertAction(title: "Cancel",
+                                           style: .cancel,
+                                           handler: nil))
+        
+        present(alertSheet, animated: true)
     }
 }

@@ -11,7 +11,7 @@
         <!--Chats-->
         <scene sceneID="T0A-oz-RGE">
             <objects>
-                <viewController id="lQa-gm-jgV" sceneMemberID="viewController">
+                <viewController id="lQa-gm-jgV" customClass="ConversationsViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQu-pN-8vh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

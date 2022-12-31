@@ -262,9 +262,5 @@ extension LoginViewController: LoginButtonDelegate {
                 
             })
         })
-        
-        
     }
-    
-    
 }

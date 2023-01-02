@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
@@ -77,8 +78,11 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    // private let googleLogInButton = GIDSignInButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         title = "Log In"
         view.backgroundColor = .white
         
@@ -95,6 +99,7 @@ class LoginViewController: UIViewController {
         
         facebookLoginButton.delegate = self
         
+        
         // Add subviews
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
@@ -103,6 +108,8 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(loginButton)
         
         scrollView.addSubview(facebookLoginButton)
+        // scrollView.addSubview(googleLogInButton)
+        //googleLogInButton.addTarget(self, action: #selector(googleSignInButtonTapped), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -131,10 +138,13 @@ class LoginViewController: UIViewController {
                                    height: 52)
         
         facebookLoginButton.frame = CGRect(x: 30,
-                                   y: loginButton.bottom + 20,
-                                   width: scrollView.width - 60,
-                                   height: 52)
-        //facebookLoginButton.frame.origin.y = facebookLoginButton.bottom + 10
+                                           y: loginButton.bottom + 20,
+                                           width: scrollView.width - 60,
+                                           height: 52)
+        /*googleLogInButton.frame = CGRect(x: 30,
+                                         y: facebookLoginButton.bottom + 20,
+                                         width: scrollView.width - 60,
+                                         height: 52)*/
     }
     
     @objc private func loginButtonTapped() {

@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             didFinishLaunchingWithOptions: launchOptions
         )
         
-        
         return true
     }
     
@@ -42,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
         
+        // Google Sign In
         var handled: Bool
         
         handled = GIDSignIn.sharedInstance.handle(url)
@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If not handled by this app, return false.
         return false
     }
+    
 }
 
 

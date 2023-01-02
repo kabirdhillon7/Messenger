@@ -38,6 +38,12 @@ class ConversationsViewController: UIViewController {
         setupTableView()
         fetchConversations()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tableView.frame = view.bounds
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -61,7 +67,7 @@ class ConversationsViewController: UIViewController {
     }
     
     private func fetchConversations() {
-        
+        tableView.isHidden = false
     }
 
 }

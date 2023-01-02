@@ -22,7 +22,8 @@ A longer description of the app, explaining its purpose and main features.
 
 ## Requirements
 
-A list of the minimum requirements necessary to run the app.
+- iOS 16.2 or later
+- iPhone 8 or newer
 
 ## Screenshots
 

@@ -33,6 +33,7 @@ class ConversationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didTapComposeButton))
         view.addSubview(tableView)
         view.addSubview(noConversationsLabel)
         setupTableView()
@@ -68,6 +69,13 @@ class ConversationsViewController: UIViewController {
     
     private func fetchConversations() {
         tableView.isHidden = false
+    }
+    
+    @objc func didTapComposeButton() {
+        let vc = NewConverstionViewController()
+        let navVC = UINavigationController(rootViewController: vc)
+        
+        present(navVC, animated: true)
     }
 
 }

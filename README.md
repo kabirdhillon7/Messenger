@@ -18,7 +18,9 @@ Messenger is an iOS real time chat application in Swift 5 using Firebase.
 
 ## Description
 
-A longer description of the app, explaining its purpose and main features.
+A longer description of the app, explaining its purpose and main features. Some of the main features include:
+- Account Creation
+- Facebook Log In
 
 ## Requirements
 

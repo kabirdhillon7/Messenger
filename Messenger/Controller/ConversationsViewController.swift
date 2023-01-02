@@ -82,6 +82,7 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         cell.textLabel?.text = "hello world"
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }

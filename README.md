@@ -1,4 +1,4 @@
-# Messenger --> Work In Progress ⚠️
+# Messenger ➡️ ⚠️ Work In Progress ⚠️
 
 Messenger is an iOS real time chat application in Swift 5 using Firebase.
 

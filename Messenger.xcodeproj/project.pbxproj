@@ -106,6 +106,7 @@
 				48DB04D2295556F400DEA352 /* Views */,
 				48DB04D1295556EA00DEA352 /* Controller */,
 				48DB04CB295554A600DEA352 /* Info.plist */,
+				48DB04C6295554A600DEA352 /* Assets.xcassets */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -128,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				48DB04D62955574700DEA352 /* Storyboards */,
-				48DB04C6295554A600DEA352 /* Assets.xcassets */,
 				48DB04C8295554A600DEA352 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
